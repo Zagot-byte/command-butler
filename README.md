@@ -48,42 +48,17 @@ engine.py
 
 ---
 
-## 📂 Project Structure
-
-
-
-command-butler/
-├── cli/
-│ └── butler.py
-│
-├── engine/
-│ ├── engine.py
-│ ├── executor.py
-│ ├── slm_decision.py
-│ ├── slm_analyzer.py
-│ └── logger.py
-│
-├── catalog/
-│ └── commands.json
-│
-├── history.jsonl
-├── install.sh
-└── README.md
-
-
----
 
 ## 🧪 Usage
 
 ### 1️⃣ Start the engine (one-shot listener)
-```bash
 python3 engine/engine.py
 
-2️⃣ In another terminal
+###2️⃣ In another terminal
 python3 cli/butler.py "fix net"
 python3 cli/butler.py "list process"
 
-📜 Audit Log
+###📜 Audit Log
 
 All executions are recorded in history.jsonl:
 
@@ -107,7 +82,7 @@ future memory (RAG)
 
 explainability
 
-🔐 Security Model
+###🔐 Security Model
 
 ❌ No arbitrary shell execution
 
@@ -127,7 +102,7 @@ Command Butler is safe by default.
 
 
 
-🛠️ Requirements
+###🛠️ Requirements
 
 Linux (Arch / Kali tested)
 
@@ -137,7 +112,7 @@ Ollama
 
 Phi-3-mini model
 
-🧠 Philosophy
+###🧠 Philosophy
 
 AI should assist, not take control.
 
