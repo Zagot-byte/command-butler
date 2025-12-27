@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "desc": "check network status",
+    "cmd": ["nmcli", "general", "status"],
+    "tags": ["network", "safe"],
+    "sudo": false,
+    "risk": "low"
+  },
+  {
+    "id": 2,
+    "desc": "restart wifi radio",
+    "cmd": ["nmcli", "radio", "wifi", "off"],
+    "followup": ["nmcli", "radio", "wifi", "on"],
+    "tags": ["network", "fix"],
+    "sudo": false,
+    "risk": "low"
+  },
+  {
+    "id": 3,
+    "desc": "list running processes",
+    "cmd": ["ps", "aux"],
+    "tags": ["system", "inspect"],
+    "sudo": false,
+    "risk": "low"
+  },
+{
+  "id": 4,
+  "desc": "restart network manager service",
+  "cmd": ["systemctl", "restart", "NetworkManager"],
+  "tags": ["network", "service"],
+  "sudo": true  ,
+  "risk": "medium"
+}]
